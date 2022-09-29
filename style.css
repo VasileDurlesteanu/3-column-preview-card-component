@@ -24,10 +24,10 @@ body {
 }
 
 main {
-    margin: 16% auto;
+    margin: 20% auto;
     display: grid;
     grid-template-columns: repeat(3, 33vh);
-    grid-template-rows: 70vh;
+    grid-template-rows: 54vh;
 }
 
 .content-container {
@@ -40,6 +40,8 @@ main {
 
 .sedans {
     background-color: var(--bright-orange);
+    border-top-left-radius: 0.625rem;
+    border-bottom-left-radius: 0.625rem;
 }
 
 .suvs {
@@ -48,6 +50,8 @@ main {
 
 .luxury {
     background-color: var(--very-dark-cyan);
+    border-top-right-radius: 0.625rem;
+    border-bottom-right-radius: 0.625rem;
 }
 
 h1 {
@@ -60,7 +64,55 @@ h1 {
 
 p {
     font-family: 'Lexend Deca', sans-serif;
-    font-weight: 400;
+    font-weight: 200;
     font-size: 0.938rem;
     color: var(--very-light-gray);
+    width: 12.375rem;
+    margin: 0;
+    line-height: 1.8;
+}
+
+.learn-more {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    border: 0;
+    border-radius: 3.125rem;
+    cursor: pointer;
+    font-size: 0.938rem;
+    mix-blend-mode: screen;
+    margin-top: 5rem;
+    padding: 0.938rem 2.5rem;
+}
+
+.learn-more:active {
+    background-color: transparent;
+    color:var(--very-light-gray);
+    border: 0.125rem solid var(--very-light-gray);
+}
+
+/* mobile */
+
+@media(max-width: 850px) {
+    main {
+        grid-template-columns: none;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    p {
+        width: 20.625rem;
+    }
+
+    .sedans {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0.625rem;
+    }
+
+    .luxury {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0.625rem;
+    }
+
+    .learn-more{
+        margin-top: 2.5rem;
+    }
 }
