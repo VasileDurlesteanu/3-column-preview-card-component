@@ -54,7 +54,7 @@ main {
     border-bottom-right-radius: 0.625rem;
 }
 
-h1 {
+h2 {
     font-family: 'Big Shoulders Display', cursive;
     font-weight: 700;
     font-size: 2.5rem;
@@ -93,6 +93,11 @@ p {
 /* mobile */
 
 @media(max-width: 850px) {
+
+    .grid-container{
+        margin: 10px;
+    }
+
     main {
         grid-template-columns: none;
         grid-template-rows: repeat(3, 1fr);
@@ -102,13 +107,18 @@ p {
         width: 20.625rem;
     }
 
+    .content-container{
+        margin: 0;
+        padding: 20px 20px;
+    }
+
     .sedans {
         border-bottom-left-radius: 0;
         border-top-right-radius: 0.625rem;
     }
 
     .luxury {
-        border-top-left-radius: 0;
+        border-top-right-radius: 0;
         border-bottom-left-radius: 0.625rem;
     }
 
